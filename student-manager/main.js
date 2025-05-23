@@ -13,21 +13,23 @@ window.onload = function () {
 
 function addStudent() {
   const name = document.getElementById("nameInput").value.trim();
-  if(name === ""|| name === isNaN) {
-    alert("Debes de capturar un nombre valido");
+
+  if (name === "" || name === isNaN) {
+    alert("Debes de capturar un nombre válido");
     return;
   }
   const grade = parseFloat(document.getElementById("gradeInput").value);
-  if(grade > 100 || grade < 0) {
-    alert("Debes de capturar una calificacion valida");
+  if (grade > 100 || grade < 0) {
+    alert("Debes de capturar una calificación válida");
     return;
   }
 
-  const student = { 
-    name, 
+  const student = {
+    name,
     grade,
-    status: grade >= 70? "Aprobado" : "Reprobado",
+    status: grade >= 70 ? "Passed" : "Failed",
   };
+
   students.push(student);
 
   saveToLocalStorage();
