@@ -66,3 +66,5 @@ function updateAverage() {
 function saveToLocalStorage() {
   localStorage.setItem("students", JSON.stringify(students));
 }
+
+
